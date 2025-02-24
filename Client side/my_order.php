@@ -63,9 +63,9 @@ if (!isset($_SESSION['USER_LOGIN'])) {
                                 </thead>
                                 <tbody>
                                     <?php
-                                    echo "<pre>";
-                                    print_r($_SESSION);
-                                    echo "</pre>";
+                                    // echo "<pre>";
+                                    // print_r($_SESSION);
+                                    // echo "</pre>";
 
                                     $uid = $_SESSION['USER_ID'];
                                     $res = mysqli_query($con, "SELECT `order`.*, order_status.name AS order_status_str 
@@ -81,7 +81,6 @@ if (!isset($_SESSION['USER_LOGIN'])) {
                                                     href="my_order_details.php?id=<?php echo $row['id'] ?>">
                                                     <?php echo $row['id'] ?></a>
                                                 <br />
-                                                <a href="order_pdf.php?id=<?php echo $row['id'] ?>"> PDF</a>
                                             </td>
                                             <td class="product-name"><?php echo $row['added_on'] ?></td>
                                             <td class="product-name">

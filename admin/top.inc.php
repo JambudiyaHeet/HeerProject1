@@ -62,9 +62,6 @@ if(isset($_SESSION['ADMIN_LOGIN']) && $_SESSION['ADMIN_LOGIN']!=''){
                      <a href="users.php" > User Master</a>
                   </li>
 				  <li class="menu-item-has-children dropdown">
-                     <a href="coupon_master.php" > Coupon Master</a>
-                  </li>
-				  <li class="menu-item-has-children dropdown">
                      <a href="contact_us.php" > Contact Us</a>
                   </li>
 				  <?php } ?>

@@ -70,6 +70,13 @@
                         <div class="product__list clearfix mt--30">
 							<?php
 							$get_product=get_product($con,4);
+                            // console.log(get_product());
+
+                            // Print the array in a readable format
+                            // echo '<pre>';
+                            // print_r($get_product);
+                            // echo '</pre>';
+
 							foreach($get_product as $list){
 							?>
                             <!-- Start Single Category -->
@@ -77,7 +84,8 @@
                                 <div class="category">
                                     <div class="ht__cat__thumb">
                                         <a href="product.php?id=<?php echo $list['id']?>">
-                                            <img src="<?php echo PRODUCT_IMAGE_SITE_PATH.$list['image']?>" alt="product images">
+                                            <img src="<?php echo PRODUCT_IMAGE_SITE_PATH.'/'.$list['image']?>" alt="<?php echo PRODUCT_IMAGE_SITE_PATH.'/'.$list['image']?>">
+                                            <!-- <img src="media\product\classical1.jpg" alt="product images"> -->
                                         </a>
                                     </div>
                                     <?php

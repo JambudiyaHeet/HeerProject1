@@ -24,7 +24,7 @@ require('top.php');
     <div class="container" style="max-width: 900px;">
         <div class="row">
             <div class="col-md-6">
-                <img url="https://www.pexels.com/photo/diverse-group-of-people-gathering-together-3797402/" alt="Our Team" class="img-responsive" style="border-radius: 10px;">
+                <img src="images\about\team.jpg" alt="Our Team" class="img-responsive" style="border-radius: 10px;">
             </div>
             <div class="col-md-6">
                 <h2 style="font-family: cursive; font-size: 36px; margin-bottom: 20px;">Welcome to The Spinster</h2>
@@ -50,17 +50,17 @@ require('top.php');
         <p style="font-size: 20px; line-height: 1.8;">We are a team of vinyl enthusiasts, collectors, and music lovers dedicated to bringing the best records to your collection.</p>
         <div class="row">
             <div class="col-md-4">
-                <img src="images/team/founder.jpg" alt="Founder" class="img-responsive" style="border-radius: 50%; width: 150px; height: 150px;">
+                <img src="images/team/founder.jpg" alt="Founder" class="img-responsive" style="border-radius: 50%; width: 150px; height: 150px;margin: 2% 20%;">
                 <h4 style="font-family: cursive; font-size: 24px; margin-top: 15px;">John Doe</h4>
                 <p style="font-size: 18px;">Founder & CEO</p>
             </div>
             <div class="col-md-4">
-                <img src="images/team/designer.jpg" alt="Lead Curator" class="img-responsive" style="border-radius: 50%; width: 150px; height: 150px;">
+                <img src="images/team/designer.jpg" alt="Lead Curator" class="img-responsive" style="border-radius: 50%; width: 150px; height: 150px;margin: 2% 20%;">
                 <h4 style="font-family: cursive; font-size: 24px; margin-top: 15px;">Jane Smith</h4>
                 <p style="font-size: 18px;">Lead Curator</p>
             </div>
             <div class="col-md-4">
-                <img src="images/team/marketing.jpg" alt="Marketing Head" class="img-responsive" style="border-radius: 50%; width: 150px; height: 150px;">
+                <img src="images/team/marketing.jpg" alt="Marketing Head" class="img-responsive" style="border-radius: 50%; width: 150px; height: 150px;margin: 2% 20%;">
                 <h4 style="font-family: cursive; font-size: 24px; margin-top: 15px;">Michael Johnson</h4>
                 <p style="font-size: 18px;">Marketing Head</p>
             </div>

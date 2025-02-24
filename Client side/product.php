@@ -1,6 +1,5 @@
 <?php 
 require('top.php');
-require('manage_cart.php');
 if(isset($_GET['id'])){
 	$product_id=mysqli_real_escape_string($con,$_GET['id']);
 	if($product_id>0){
@@ -72,35 +71,23 @@ if(isset($_GET['id'])){
                                 <p class="pro__info"><?php echo $get_product['0']['short_desc']?></p>
                                 <div class="ht__pro__desc">
                                     <div class="sin__desc">
-										<?php
-										$productSoldQtyByProductId=productSoldQtyByProductId($con,$get_product['0']['id']);
-										
-										$pending_qty=$get_product['0']['qty']-$productSoldQtyByProductId;
-										
-										$cart_show='yes';
-										if($get_product['0']['qty']>$productSoldQtyByProductId){
-											$stock='In Stock';			
-										}else{
-											$stock='Not in Stock';
-											$cart_show='';
-										}
-										?>
-                                        <p><span>Availability:</span> <?php echo $stock?></p>
+                                        <p><span>Availability:</span> In Stock</p>
                                     </div>
 									<div class="sin__desc">
-										<?php
-										if($cart_show!=''){
-										?>
                                         <p><span>Qty:</span> 
 										<select id="qty">
-											<?php
-											for($i=1;$i<=$pending_qty;$i++){
-												echo "<option>$i</option>";
-											}
-											?>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
 										</select>
 										</p>
-										<?php } ?>
                                     </div>
                                     <div class="sin__desc align--left">
                                         <p><span>Categories:</span></p>
@@ -112,11 +99,12 @@ if(isset($_GET['id'])){
                                     </div>
 									
                                 </div>
-								<?php
-								if($cart_show!=''){
-								?>
-								<a class="fr__btn" href="javascript:void(0)" onclick="manage_cart('<?php echo $get_product['0']['id']?>','add')">Add to cart</a>
-                              <?php } ?>
+                                <a class="fr__btn" href="javascript:void(0)" 
+                                    onclick="<?php echo isset($_SESSION['USER_LOGIN']) && $_SESSION['USER_LOGIN'] == 'yes' 
+                                        ? "manage_cart('".$get_product[0]['id']."','add')" 
+                                        : "window.location.href='login.php'"; ?>">
+                                    Add to cart
+                                    </a>
                             </div>
                         </div>
                     </div>
@@ -124,7 +112,7 @@ if(isset($_GET['id'])){
             </div>
             <!-- End Product Details Top -->
         </section>
-        <!-- End Product Details Area 
+        <!-- End Product Details Area -->
 		<!-- Start Product Description -->
         <section class="htc__produc__decription bg__white">
             <div class="container">
@@ -156,4 +144,4 @@ if(isset($_GET['id'])){
         <!-- End Product Description -->
         
 										
-<?php require('footer.php')?>        
+<?php require('footer.php')?>

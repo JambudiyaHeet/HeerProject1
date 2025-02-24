@@ -237,10 +237,10 @@ if ($mypage == 'contact.php') {
 											<a href="wishlist.php" class="mr15"><i class="icon-heart icons"></i></a>
 											<a href="wishlist.php"><span
 													class="htc__wishlist"><?php echo $wishlist_count; ?></span></a>
+											<a href="cart.php"><i class="icon-handbag icons"></i></a>
+											<a href="cart.php"><span
+													class="htc__qua"><?php echo $totalProduct; ?></span></a>
 										<?php } ?>
-										<a href="cart.php"><i class="icon-handbag icons"></i></a>
-										<a href="cart.php"><span
-												class="htc__qua"><?php echo $totalProduct; ?></span></a>
 									</div>
 								</div>
 							</div>
